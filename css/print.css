@@ -1,0 +1,48 @@
+@media print {
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    header,
+    footer {
+        display: none;
+    }
+
+    body {
+        background-color: var(--color-surface);
+        color: #000000;
+        font-size: 10pt;
+    }
+
+    main.container,
+    .cv-sidebar {
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+    }
+
+    main.container {
+        max-width: none;
+        margin: 0;
+    }
+
+    .cv-layout {
+        flex-direction: row;
+        line-height: 1.3;
+    }
+
+    .cv-sidebar {
+        flex: 0 0 30%;
+        color: inherit;
+    }
+
+    .cv-sidebar a {
+        color: inherit;
+    }
+
+    .cv-portrait {
+        width: 100px;
+        height: auto;
+    }
+}

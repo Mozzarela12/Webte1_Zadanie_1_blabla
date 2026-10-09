@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Môj týždenný rozvrh výučby na FEI STU a časy, kedy ma môžete zastihnúť.">
+
+    <title>Samuel Hrdlička — Kedy ma zastihnete</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js" defer></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+</head>
+<body>
+<header class="container">
+    <div class="brand">
+        <span class="monogram">SH</span>
+
+        <div>
+            <p class="brand-name">Samuel Hrdlička</p>
+            <p>Študent aplikovanej informatiky</p>
+        </div>
+    </div>
+
+    <nav>
+        <button class="menu-toggle" type="button">☰ Menu</button>
+
+        <ul class="nav-list">
+            <li>
+                <a href="../index.html">Profil</a>
+            </li>
+            <li>
+                <a href="cv.html">Životopis</a>
+            </li>
+            <li>
+                <a href="workspace.html">Pracovné prostredie</a>
+            </li>
+            <li>
+                <a href="schedule.html" class="active">Kedy ma zastihnete</a>
+            </li>
+            <li>
+                <a href="map.html">Kde ma nájdete</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>Kedy ma zastihnete</h1>
+
+    <section>
+        <h2>Môj rozvrh</h2>
+
+        <p>
+            Tu nájdete môj týždenný rozvrh výučby na FEI STU.
+        </p>
+        <p id="schedule-status">
+            Aktuálnu výučbu zisťujem…
+        </p>
+        <div class="schedule-filters">
+            <button class="schedule-filter active" type="button" data-filter="all">
+                Všetko
+            </button>
+
+            <button class="schedule-filter" type="button" data-filter="lecture">
+                Prednášky
+            </button>
+
+            <button class="schedule-filter" type="button" data-filter="exercise">
+                Cvičenia
+            </button>
+        </div>
+
+        <p id="schedule-empty" hidden>
+            Zvolenému filtru nevyhovuje žiadna výučba.
+        </p>
+
+        <div class="schedule-legend">
+            <span class="legend-item">
+                <span class="legend-color lecture"></span>
+                Prednáška
+            </span>
+
+            <span class="legend-item">
+                <span class="legend-color exercise"></span>
+                Cvičenie
+            </span>
+        </div>
+
+        <div class="schedule-wrapper">
+            <table class="schedule-table">
+                <caption>Týždenný rozvrh výučby</caption>
+
+                <thead>
+                <tr>
+                    <th scope="col">Deň</th>
+                    <th scope="col">7:00 – 7:50</th>
+                    <th scope="col">8:00 – 8:50</th>
+                    <th scope="col">9:00 – 9:50</th>
+                    <th scope="col">10:00 – 10:50</th>
+                    <th scope="col">11:00 – 11:50</th>
+                    <th scope="col">12:00 – 12:50</th>
+                    <th scope="col">13:00 – 13:50</th>
+                    <th scope="col">14:00 – 14:50</th>
+                    <th scope="col">15:00 – 15:50</th>
+                    <th scope="col">16:00 – 16:50</th>
+                    <th scope="col">17:00 – 17:50</th>
+                    <th scope="col">18:00 – 18:50</th>
+                    <th scope="col">19:00 – 19:50</th>
+                    <th scope="col">20:00 – 20:50</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr data-day="1">
+                    <th scope="row">Pondelok</th>
+
+                    <td colspan="2"></td>
+
+                    <td colspan="2"
+                        class="schedule-class exercise"
+                        data-start="09:00"
+                        data-end="10:50">
+                        <strong>Webové technológie 1</strong><br>
+                        c137
+                    </td>
+
+                    <td colspan="2"></td>
+
+                    <td colspan="2"
+                        class="schedule-class exercise"
+                        data-start="13:00"
+                        data-end="14:50">
+                        <strong>Operačné systémy</strong><br>
+                        cpu-c
+                    </td>
+
+                    <td colspan="2"
+                        class="schedule-class lecture"
+                        data-start="15:00"
+                        data-end="16:50">
+                        <strong>Lineárna algebra 2</strong><br>
+                        cd300
+                    </td>
+
+                    <td colspan="4"></td>
+                </tr>
+
+                <tr data-day="2">
+                    <th scope="row">Utorok</th>
+
+                    <td colspan="3"></td>
+
+                    <td colspan="2"
+                        class="schedule-class lecture"
+                        data-start="10:00"
+                        data-end="11:50">
+                        <strong>Webové technológie 1</strong><br>
+                        cd150
+                    </td>
+
+                    <td colspan="3"></td>
+
+                    <td colspan="2"
+                        class="schedule-class lecture"
+                        data-start="15:00"
+                        data-end="16:50">
+                        <strong>Softvérové inžinierstvo</strong><br>
+                        cd300
+                    </td>
+
+                    <td class="schedule-class exercise"
+                        data-start="17:00"
+                        data-end="17:50">
+                        <strong>Softvérové inžinierstvo</strong><br>
+                        cd300
+                    </td>
+
+                    <td colspan="3"></td>
+                </tr>
+
+                <tr data-day="3">
+                    <th scope="row">Streda</th>
+
+                    <td></td>
+
+                    <td colspan="2"
+                        class="schedule-class lecture"
+                        data-start="08:00"
+                        data-end="09:50">
+                        <strong>Operačné systémy</strong><br>
+                        cd300
+                    </td>
+
+                    <td></td>
+
+                    <td colspan="2"
+                        class="schedule-class exercise"
+                        data-start="11:00"
+                        data-end="12:50">
+                        <strong>Telesná kultúra 5</strong><br>
+                        TML
+                    </td>
+
+                    <td colspan="2"
+                        class="schedule-class lecture"
+                        data-start="13:00"
+                        data-end="14:50">
+                        <strong>Webové technológie 1</strong><br>
+                        cd150
+                    </td>
+
+                    <td colspan="6"></td>
+                </tr>
+
+                <tr data-day="4">
+                    <th scope="row">Štvrtok</th>
+
+                    <td colspan="5"></td>
+
+                    <td class="schedule-class exercise"
+                        data-start="12:00"
+                        data-end="12:50">
+                        <strong>Softvérové inžinierstvo</strong><br>
+                        c137
+                    </td>
+
+                    <td colspan="8"></td>
+                </tr>
+
+                <tr data-day="5">
+                    <th scope="row">Piatok</th>
+
+                    <td colspan="6"></td>
+
+                    <td colspan="2"
+                        class="schedule-class exercise"
+                        data-start="13:00"
+                        data-end="14:50">
+                        <strong>Lineárna algebra 2</strong><br>
+                        bc35
+                    </td>
+
+                    <td colspan="6"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="semester-progress">
+            <h3>Priebeh semestra</h3>
+
+            <progress id="semester-progress" max="100" value="0">
+                0 %
+            </progress>
+
+            <p id="semester-status">
+                Priebeh semestra zisťujem…
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer class="container">
+    <address>
+        <p>Samuel Hrdlička</p>
+        <a href="mailto:xhrdlickas@stuba.sk">xhrdlickas@stuba.sk</a>
+    </address>
+
+    <p>&copy; 2026 Samuel Hrdlička</p>
+</footer>
+</body>
+</html>

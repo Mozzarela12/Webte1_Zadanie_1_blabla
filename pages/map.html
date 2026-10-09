@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Interaktívna mapa mojej školy a bydliska s možnosťou pridávať vlastné body a vypočítať vzdialenosť.">
+
+    <title>Samuel Hrdlička — Kde ma nájdete</title>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+
+    <script src="../js/script.js" defer></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+</head>
+<body>
+<header class="container">
+    <div class="brand">
+        <span class="monogram">SH</span>
+
+        <div>
+            <p class="brand-name">Samuel Hrdlička</p>
+            <p>Študent aplikovanej informatiky</p>
+        </div>
+    </div>
+
+    <nav>
+        <button class="menu-toggle" type="button">☰ Menu</button>
+
+        <ul class="nav-list">
+            <li>
+                <a href="../index.html">Profil</a>
+            </li>
+            <li>
+                <a href="cv.html">Životopis</a>
+            </li>
+            <li>
+                <a href="workspace.html">Pracovné prostredie</a>
+            </li>
+            <li>
+                <a href="schedule.html">Kedy ma zastihnete</a>
+            </li>
+            <li>
+                <a href="map.html" class="active">Kde ma nájdete</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>Kde ma nájdete</h1>
+
+    <section>
+        <h2>Moje miesta</h2>
+
+        <p>
+            Na mape nájdete moju školu a bydlisko.
+            Kliknutím do mapy budete môcť pridať vlastný bod.
+        </p>
+        <div class="map-controls">
+            <div class="map-field">
+                <label for="map-point">Začiatok</label>
+
+                <select id="map-point">
+                    <option value="">Vyberte miesto</option>
+                </select>
+            </div>
+
+            <div class="map-field">
+                <label for="map-target">Cieľ</label>
+
+                <select id="map-target">
+                    <option value="">Vyberte miesto</option>
+                </select>
+            </div>
+        </div>
+
+        <p id="map-status">
+            Vyberte začiatok a cieľ na výpočet vzdialenosti.
+            Vlastné miesto pridáte kliknutím do mapy a zadaním názvu.
+        </p>
+
+        <div id="map"></div>
+    </section>
+</main>
+
+<footer class="container">
+    <address>
+        <p>Samuel Hrdlička</p>
+        <a href="mailto:xhrdlickas@stuba.sk">xhrdlickas@stuba.sk</a>
+    </address>
+
+    <p>&copy; 2026 Samuel Hrdlička</p>
+</footer>
+</body>
+</html>
