@@ -13,6 +13,7 @@
     --color-surface: #ffffff;
     --color-lecture: #d9f2d9;
     --color-exercise: #dff3fa;
+    --color-sport: #fff1cc;
     --radius: 12px;
     --space: 16px;
     --monogram-size: 64px;
@@ -342,6 +343,11 @@ footer a {
 
 .schedule-legend .exercise {
     background-color: var(--color-exercise);
+}
+
+.schedule-table .sport,
+.schedule-legend .sport {
+    background-color: var(--color-sport);
 }
 
 .schedule-table tbody tr:nth-child(even) {

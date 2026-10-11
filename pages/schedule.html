@@ -8,9 +8,16 @@
           content="Môj týždenný rozvrh výučby na FEI STU a časy, kedy ma môžete zastihnúť.">
 
     <title>Samuel Hrdlička — Kedy ma zastihnete</title>
+    <meta property="og:title"
+          content="Samuel Hrdlička — Kedy ma zastihnete">
+    <meta property="og:description"
+          content="Môj týždenný rozvrh výučby na FEI STU a časy, kedy ma môžete zastihnúť.">
+    <meta property="og:image"
+          content="../img/me.jpg">
 
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/script.js" defer></script>
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/schedule.js" defer></script>
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
 </head>
 <body>
@@ -78,15 +85,20 @@
         </p>
 
         <div class="schedule-legend">
-            <span class="legend-item">
-                <span class="legend-color lecture"></span>
-                Prednáška
-            </span>
+    <span class="legend-item">
+        <span class="legend-color lecture"></span>
+        Prednáška
+    </span>
 
             <span class="legend-item">
-                <span class="legend-color exercise"></span>
-                Cvičenie
-            </span>
+        <span class="legend-color exercise"></span>
+        Cvičenie
+    </span>
+
+            <span class="legend-item">
+        <span class="legend-color sport"></span>
+        Telesná kultúra
+    </span>
         </div>
 
         <div class="schedule-wrapper">
@@ -197,7 +209,7 @@
                     <td></td>
 
                     <td colspan="2"
-                        class="schedule-class exercise"
+                        class="schedule-class exercise sport"
                         data-start="11:00"
                         data-end="12:50">
                         <strong>Telesná kultúra 5</strong><br>
